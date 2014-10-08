@@ -7,13 +7,21 @@ package com.zubiri.geometria;
 
 public class Circulo {
 
-double radio1=0;
+double radio=0;
+
 double result;
+
+public Circulo (double valoradio)
+		{
+		radio=valoradio;
+		}
+
+
  //Método para calcular la circunferencia del circulo
  public double circun () {
 
 	double result = 0;
-	result = 6.283185307179586476925286766559 * getRadio();
+	result = 6.283185307179586476925286766559 * radio;
 	return result;
  }
 
@@ -23,18 +31,12 @@ double result;
  public double area () {
 
 	double result = 0;
-	result = 3.1415926535897932384626433832795 * getRadio()* getRadio();
+	result = 3.1415926535897932384626433832795 * radio * radio;
 	return result;
  }
 
-//declaracion de los get y set
-private double getRadio(){
-	return radio1;
-}
-public void  setRadio(double radio){
 
-radio1=radio;
-}
+
 
 }
 
